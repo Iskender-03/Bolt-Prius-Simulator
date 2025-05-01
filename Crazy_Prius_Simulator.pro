@@ -9,4 +9,6 @@ HEADERS += mainwindow.h prius.h ordermanager.h gamemanager.h commentwindow.h \
     fuelcan.h \
     gameview.h \
     startwindow.h
+    RESOURCES = \
+    resources.qrc
 QMAKE_CXXFLAGS += -O0

@@ -43,19 +43,19 @@ GameManager::GameManager(MainWindow *window, Prius *prius, QObject *parent)
     });
 
     newOrderSound = new QSoundEffect(this);
-    newOrderSound->setSource(QUrl::fromLocalFile("C:/Users/iskender/Documents/Crazy_Prius_Simulator_new/sounds/order_sound.wav"));
+    newOrderSound->setSource(QUrl("qrc:/sounds/order_sound.wav")); // <--- Изменен путь
     newOrderSound->setVolume(0.7);
 
     winSound = new QSoundEffect(this);
-    winSound->setSource(QUrl::fromLocalFile("C:/Users/iskender/Documents/Crazy_Prius_Simulator_new/sounds/pobeda.wav"));
+    winSound->setSource(QUrl("qrc:/sounds/pobeda.wav"));
     winSound->setVolume(0.9);
 
     fatalCrashSound = new QSoundEffect(this);
-    fatalCrashSound->setSource(QUrl::fromLocalFile("C:/Users/iskender/Documents/Crazy_Prius_Simulator_new/sounds/avariya.wav"));
+    fatalCrashSound->setSource(QUrl("qrc:/sounds/avariya.wav")); // <--- Изменен путь
     fatalCrashSound->setVolume(1.0);
 
     debtGameOverSound = new QSoundEffect(this);
-    debtGameOverSound->setSource(QUrl::fromLocalFile("C:/Users/iskender/Documents/Crazy_Prius_Simulator_new/sounds/gde_dengi.wav"));
+    debtGameOverSound->setSource(QUrl("qrc:/sounds/gde_dengi.wav")); // <--- Изменен путь
     debtGameOverSound->setVolume(0.9);
 
     qDebug() << "GameManager initialized...";
@@ -402,7 +402,7 @@ void GameManager::onCollision() {
     if (turboWasActive && collisionSpeed >= 175) {
         qDebug() << "FATAL CRASH with Turbo at speed:" << collisionSpeed;
         if (fatalCrashSound && fatalCrashSound->isLoaded()) {
-            fatalCrashSound->play();
+            fatalCrashSound->play(); // <--- Воспроизведение звука
         } else {
             qDebug() << "Fatal crash sound not loaded or null!";
         }
@@ -455,7 +455,7 @@ void GameManager::addMoney(double amount) {
         if (wallet >= 15.0 && !(mainWindow && mainWindow->isGameOver())) {
             qDebug() << "Win condition met! Wallet >= 15 AZN.";
             if (winSound && winSound->isLoaded()) {
-                winSound->play();
+                winSound->play(); // <--- Воспроизведение звука
             } else {
                 qDebug() << "Win sound not loaded or null!";
             }
@@ -481,7 +481,7 @@ void GameManager::deductMoney(double amount) {
 void GameManager::checkDebtLimit() {
     if (wallet < MIN_WALLET_GAME_OVER && !(mainWindow && mainWindow->isGameOver())) {
         if (debtGameOverSound && debtGameOverSound->isLoaded()) {
-            debtGameOverSound->play();
+            debtGameOverSound->play(); // <--- Воспроизведение звука
         } else {
             qDebug() << "Debt game over sound not loaded or null!";
         }

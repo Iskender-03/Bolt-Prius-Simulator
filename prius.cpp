@@ -3,7 +3,6 @@
 #include <QPixmap>
 
 
-// Убедимся, что инициализация в списке верная
 Prius::Prius(QGraphicsItem *parent)
     : QGraphicsPixmapItem(parent),
     speed(0),
