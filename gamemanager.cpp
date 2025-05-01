@@ -43,7 +43,7 @@ GameManager::GameManager(MainWindow *window, Prius *prius, QObject *parent)
     });
 
     newOrderSound = new QSoundEffect(this);
-    newOrderSound->setSource(QUrl("qrc:/sounds/order_sound.wav")); // <--- Изменен путь
+    newOrderSound->setSource(QUrl("qrc:/sounds/order_sound.wav")); 
     newOrderSound->setVolume(0.7);
 
     winSound = new QSoundEffect(this);
@@ -51,11 +51,11 @@ GameManager::GameManager(MainWindow *window, Prius *prius, QObject *parent)
     winSound->setVolume(0.9);
 
     fatalCrashSound = new QSoundEffect(this);
-    fatalCrashSound->setSource(QUrl("qrc:/sounds/avariya.wav")); // <--- Изменен путь
+    fatalCrashSound->setSource(QUrl("qrc:/sounds/avariya.wav")); 
     fatalCrashSound->setVolume(1.0);
 
     debtGameOverSound = new QSoundEffect(this);
-    debtGameOverSound->setSource(QUrl("qrc:/sounds/gde_dengi.wav")); // <--- Изменен путь
+    debtGameOverSound->setSource(QUrl("qrc:/sounds/gde_dengi.wav"));
     debtGameOverSound->setVolume(0.9);
 
     qDebug() << "GameManager initialized...";
