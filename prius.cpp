@@ -11,7 +11,7 @@ Prius::Prius(QGraphicsItem *parent)
     turboActive(false)
 {
 
-    QPixmap pixmap("C:/Users/iskender/Documents/Crazy_Prius_Simulator/pictures/prius2.jpg");
+    QPixmap pixmap(":/pictures/prius2.jpg");
     if (pixmap.isNull()) {
         qDebug() << "Error: Failed to load prius.jpg";
         pixmap = QPixmap(30, 50);
