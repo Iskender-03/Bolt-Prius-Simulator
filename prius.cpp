@@ -11,9 +11,9 @@ Prius::Prius(QGraphicsItem *parent)
     turboActive(false)
 {
 
-    QPixmap pixmap(":/pictures/prius2.jpg");
+    QPixmap pixmap(":/pictures/Prius2.jpg");
     if (pixmap.isNull()) {
-        qDebug() << "Error: Failed to load prius.jpg";
+        qDebug() << "Error: Failed to load Prius.jpg";
         pixmap = QPixmap(30, 50);
         pixmap.fill(Qt::red);
     }
