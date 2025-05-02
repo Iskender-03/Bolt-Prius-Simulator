@@ -35,7 +35,7 @@ class QMediaPlaylist;
 class ObstacleCar : public QGraphicsPixmapItem {
 public:
     ObstacleCar(int lane) : carLane(lane) {
-        QPixmap pixmap(":/pictures/obstacle_car.png");
+        QPixmap pixmap(":/pictures/obstacle_car.jpg");
         if (pixmap.isNull()) {
             qDebug() << "Error: Failed to load obstacle_car resource ':/pictures/obstacle_car.jpg'";
             pixmap = QPixmap(30, 50); pixmap.fill(Qt::blue);
