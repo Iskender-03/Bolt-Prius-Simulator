@@ -1,6 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource prefix="/">
-    <file>pictures/prius2.jpg</file>
+    <file>pictures/Prius2.jpg</file>
     <file>pictures/obstacle_car.jpg</file>
     <file>pictures/star.jpg</file>
     <file>pictures/fuel_can.jpg</file>
