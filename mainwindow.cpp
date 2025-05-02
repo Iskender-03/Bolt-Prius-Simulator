@@ -476,7 +476,7 @@ void MainWindow::delayedStartGame() {
         qDebug() << "Error: prius or scene is null in delayedStartGame!"; return;
     }
     if(movementTimer && !movementTimer->isActive()) movementTimer->start(16);
-    if(spawnTimer && !spawnTimer->isActive()) spawnTimer->start(2000);
+    if(spawnTimer && !spawnTimer->isActive()) spawnTimer->start(500);
     if(fuelSpawnTimer && !fuelSpawnTimer->isActive()) fuelSpawnTimer->start(100);
     qDebug() << "Timers started.";
 
@@ -627,7 +627,7 @@ void MainWindow::spawnObstacleCar() {
     int maxObstaclesOnScreen = 3;
     if (obstacleCars.size() >= maxObstaclesOnScreen) return;
 
-    if (QRandomGenerator::global()->bounded(100) < 70) return;
+    if (QRandomGenerator::global()->bounded(100) < 30) return;
 
     int lane = QRandomGenerator::global()->bounded(3);
     qreal spawnY = -100.0;

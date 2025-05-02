@@ -37,10 +37,10 @@ public:
     ObstacleCar(int lane) : carLane(lane) {
         QPixmap pixmap(":/pictures/obstacle_car.png");
         if (pixmap.isNull()) {
-            qDebug() << "Error: Failed to load obstacle_car resource ':/pictures/obstacle_car.png'";
+            qDebug() << "Error: Failed to load obstacle_car resource ':/pictures/obstacle_car.jpg'";
             pixmap = QPixmap(30, 50); pixmap.fill(Qt::blue);
         }
-        setPixmap(pixmap.scaled(30, 50, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        setPixmap(pixmap.scaled(60, 80, Qt::KeepAspectRatio, Qt::SmoothTransformation));
         qreal laneCenterX;
         if (lane == 0) laneCenterX = 100;
         else if (lane == 1) laneCenterX = 200;
